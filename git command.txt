@@ -1,0 +1,96 @@
+GIT COMMAND
+
+git init
+
+git add FILENAME
+
+git add .
+
+git commit -m "MSG"
+
+git commit 					then in editor write MSG multiline save and exit
+
+git log --oneline
+
+git log -- filename
+
+git log -x    x=no of last log to see
+
+
+git restore filename                               purane version me lejata ahai
+
+git restore --staged filename			   stag se waps untrack kardeta hai
+
+
+git diff 					   changes ko dikhata hai jo stag nhi hui hai
+
+git diff --staged                                  stag me changes ko dikhata hai
+
+git diff 13464 645546                              difference between version we can see number from git log --oneline
+
+git diff HEAD~1 HEAD				   last commit aur abhi ke version ko compare karta hai
+
+
+git checkout COMMIT ID                             uss version ko dikhata hai
+
+git checkout HEAD~x				   x=no of step I want to back my head
+
+git checkout main				   latest commit pe lejata hai
+
+
+
+git reset --soft HEAD~1				   last commit ko comit se hatadeta hai par staged me rakhta hai
+
+git reset --hard HEAD~1				   last commit ko hata deta hai aur staged me bhi nhi rkhta
+
+
+(GIT BRANCHES)
+
+
+git branch					no of branch
+
+git branch NEWBRANCHNAME			new branch bana deta hai
+
+git switch BRNACHNAME				uss branch pe le jata hai
+
+git checkout -b BRANCHNAME			naya branch banta hai aur uspe chala bhi jata hai
+
+git merge BRANCHNAME				uss branch ko main branch me merge kardeta hai
+
+conflict ->>>> accept current branch / accept incoming branch/ accept both 
+
+git merge --abort				abort the merge
+
+git branch -d BRANCHNAME			delete only the branch which are merged
+
+git branch -D BRANCHNAME			delete branch merged or not no matter
+
+git branch -v
+
+git branch --no-merged
+
+git branch --merged
+
+
+
+git remote add origin URL			connect GitHub and local git
+
+git remote -v					check connection hua ki nhi
+
+git push origin main
+
+git push -u origin main
+
+
+
+git clone URL					GitHub se local me laadeta along with the git history, apne aap connect bhi kardeta hau
+
+git fetch / git fetch -u origin main		kuch naya change agar hua hoto use download karta hai batata hai par implement nhi karta
+diff check karta hai				git log HEAD ..origin/main
+implement karne ke liye 			git merge origin/main
+
+git pull/git pull -u origin main		download bhi karta aur implement bhi kardeta hai
+
+
+
+
